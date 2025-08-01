@@ -24,7 +24,12 @@ header{
 /*-----NAVBAR SECTION-----*/
 
 .navbar{
-    padding: 20px;    
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    justify-self: center;
+    transition: width 0.3s;    
 }
 
 .navbar__list{
@@ -35,9 +40,15 @@ header{
     display: flex;
     gap: 20px;
     justify-content: center;
-    align-items: center;
-    box-shadow: 0 5px 10px #ccc;
+    align-items: center; 
+}
 
+nav.sticky{
+    z-index: 101;
+    width: 50%;
+    transition: width 0.9s linear;
+    justify-self: center;
+    filter: drop-shadow(0 10px 20px #494949);
 }
 
 .navbar__item{
@@ -70,7 +81,7 @@ header{
     justify-content: center;
     align-items: center;
     gap: 50px;
-    margin: 0 20px 0 20px;
+    margin: 80px 20px 0 20px;
     border-radius: 20px;
     box-shadow: 0 15px 15px #ccc;
     
@@ -119,10 +130,7 @@ header{
 
 /*-----SLIDER SECTION-----*/
 .slider{
-    position: relative;
-    z-index: 100;
-    width: 1400px;
-    height: auto;
+    width: 100%;
     margin: auto;
     overflow: hidden;
     margin-top: 30px;
@@ -131,6 +139,7 @@ header{
 
 .slider .slider__track{
     display: flex;
+    gap: 30px;
     animation: scroll 10s linear infinite;
     -webkit-animation: scroll 15s linear infinite;
     width: calc(300px * 10);
@@ -141,20 +150,20 @@ header{
 
 .slider .slide img{
     width: 100%;
-    object-fit: cover;
-    height: 200px;
+    height: 100px;
 }
 
-.slider__text{
-    position: absolute;
-    width: 1400px;
-    height: 200px;
-    background-color: #0005;
-    z-index: 300;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
+.slide img{
+    object-fit: cover;
+}
+
+.slide{
+    filter: grayscale();
+    transition: filter 0.4s;
+}
+
+.slide:hover{
+    filter: none;
 }
 
 
@@ -173,6 +182,7 @@ header{
     display: flex;
     flex-direction: column;
     gap: 100px;
+    
 }
 
 .aboutUs__block{
@@ -193,7 +203,6 @@ header{
 .aboutUs__block:nth-child(2) .aboutUs__img img{
     border-radius: 30% 30% / 80% 80%;
 }
-
 .aboutUs__block:nth-child(3) .aboutUs__img img{
     border-radius: 60px 70px 40px 140px;
 }
@@ -211,7 +220,7 @@ header{
 
 .aboutUs__text h3::before{
     content: "";
-    width: 100%;
+    width: 80%;
     height: 2px;
     bottom: 0;
     left: 0;
@@ -244,6 +253,7 @@ header{
     gap: 30px;
     background-color: #17548F;
     padding: 20px;
+    margin: 100px 0 100px 0
 }
 
 .services h2{
@@ -285,6 +295,17 @@ header{
     transition: transform 0.5s;
     color: #565360;
     font-size: 0.9rem;
+    filter: grayscale();
+
+}
+
+.card:hover{
+    filter: none;
+}
+
+
+.card:hover h2{
+    color: #17548F;
 }
 
 .card:hover{
@@ -292,7 +313,7 @@ header{
 }
 
 .card h2{
-    color: #565360;
+    color: #302e35;
     font-size: 1.5rem;
 }
 
@@ -316,30 +337,38 @@ header{
     width: 400px;
 }
 
+
+
+.opinion__slayer{
+    font-size: 1.5rem;
+    width: 100%;
+    padding-left: 10%;
+    color: #302e35;
+    margin: 40px 0 40px 0;
+}
+
+.opinion__slayer p{
+    color: #565360;
+}
+
 .opinion__container{
-    width: 1500px;
-    height: auto;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 80px;
+    margin-bottom: 100px;
+    gap: 20px;
 }
 
 .opinion__card{
-    border: 3px solid #3ec9ec;
-    color: #17548F;
-    background-color: #94E3F7;
-    border-radius: 25px;
-    height: 370px;
-    width: 300px;
+    color: #FFFFFF;
+    background-color: #17548F;
+    height: 480px;
+    width: 650px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    gap: 5px;
-    transition: transform 0.5s;
-    box-shadow: 0 5px 20px #b4b4b4;
-    text-align: center;
+    padding: 45px;
 }
 
 .opinion__card h3{
@@ -347,22 +376,22 @@ header{
 }
 
 .opinion__card p{
+    margin-top: 25px;
     font-size: 1rem;
-    padding: 0 5px 0 5px;
 }
 
-.opinion__card:hover{
-    transform: scale(1.2);
-}
+
 
 .opinion__card img{
     margin-top: 25px;
+    border: 3px solid #fff;
     border-radius: 50%;
-    height: 170px;
-    width: 170px;
+    height: 70px;
+    width: 70px;
     object-fit: cover;
-    filter: drop-shadow(0 0 15px #fff);
+    margin-bottom: 15px;
 }
+
 
 /*-----LOCATION SECTION-----*/
 

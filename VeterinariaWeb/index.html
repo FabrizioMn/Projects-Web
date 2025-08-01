@@ -8,11 +8,18 @@
     <base href="imgs/">
 </head>
 <body>
+    <script type="text/javascript">
+        window.addEventListener("scroll",function() {
+        var nav= document.querySelector("nav");
+        nav.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
     <header>
         <nav class="navbar">
                 <ul class="navbar__list">
                     <li class="navbar__item"><a class="navbar__link" href="#">Inicio</a></li>
                     <li class="navbar__item"><a class="navbar__link" href="#">Servicios</a></li>
+                    <h1>FIOVET</h1>
                     <li class="navbar__item"><a class="navbar__link" href="#">Nosotros</a></li>
                     <li class="navbar__item"><a class="navbar__link" href="#">Contacto</a></li>
                 </ul>
@@ -30,21 +37,18 @@
     </header>
 
     <section class="slider">
-        <div class="slider__text">
-            <h2>CALIDAD Y SEGURIDAD</h2>
-        </div>
         <div class="slider__track">
-            <div class="slide"><img src="slide1.webp" alt=""></div>
-            <div class="slide"><img src="slide2.jpg" alt=""></div>
-            <div class="slide"><img src="slide3.jpg" alt=""></div>
-            <div class="slide"><img src="slide4.jpg" alt=""></div>
-            <div class="slide"><img src="slide5.jpg" alt=""></div>
+            <div class="slide"><img src="bravecto.png" alt=""></div>
+            <div class="slide"><img src="cambo.jpg" alt=""></div>
+            <div class="slide"><img src="proteggo.jpeg" alt=""></div>
+            <div class="slide"><img src="supercan.jpg" alt=""></div>
+            <div class="slide"><img src="dogchow.png" alt=""></div>
 
-            <div class="slide"><img src="slide1.webp" alt=""></div>
-            <div class="slide"><img src="slide2.jpg" alt=""></div>
-            <div class="slide"><img src="slide3.jpg" alt=""></div>
-            <div class="slide"><img src="slide4.jpg" alt=""></div>
-            <div class="slide"><img src="slide5.jpg" alt=""></div>
+            <div class="slide"><img src="bravecto.png" alt=""></div>
+            <div class="slide"><img src="cambo.jpg" alt=""></div>
+            <div class="slide"><img src="proteggo.jpeg" alt=""></div>
+            <div class="slide"><img src="supercan.jpg" alt=""></div>
+            <div class="slide"><img src="dogchow.png" alt=""></div>
         </div>
     </section>
 
@@ -102,25 +106,24 @@
 
 
 
-    <div class="separation opinion">
-        <h2>Comentarios</h2>
+
+
+    <div class="opinion__slayer">
+        <p>❝TESTIMONIOS</p>
+        <h3>No te quedes solo con mi palabra</h3>
+        <p>Mas de 100 clientes estan satisfechos con el servicio</p>
     </div>
 
     <div class="opinion__container">
         <div class="opinion__card">
             <img src="persona.webp" alt="cliente">
             <h3>Yussef Gonzales</h3>
-            <p>Mi perro salió feliz y oliendo delicioso. Nunca lo había visto tan tranquilo después de un baño. ¡Recomendado 100%!</p>
+            <p>"Mi perro salió feliz y oliendo delicioso. Nunca lo había visto tan tranquilo después de un baño. ¡Recomendado 100%! Desde el momento en que entramos a FioVet, sentí que mi peludo estaba en manos expertas y amorosas. El equipo no solo lo bañó con productos especializados, sino que se tomaron el tiempo de relajarlo y acariciarlo. Salió con el pelaje suave, brillante y con una energía tan serena que parecía otro. Es evidente que se preocupan por el bienestar integral de cada mascota."</p>
         </div>
         <div class="opinion__card">
             <img src="persona.webp" alt="cliente">
-            <h3>Yussef Gonzales</h3>
-            <p>Se nota que aman lo que hacen. Me explicaron cada vacuna, me dieron confianza, y trataron a mi gatita como una reina.</p>
-        </div>
-        <div class="opinion__card">
-            <img src="persona.webp" alt="cliente">
-            <h3>Yussef Gonzales</h3>
-            <p>Desde la atención hasta el trato con mi mascota: todo impecable. Es bonito saber que existe un lugar donde realmente los cuidan como familia.</p>
+            <h3>Paneton Camarena</h3>
+            <p>"Se nota que aman lo que hacen. Me explicaron cada vacuna, me dieron confianza, y trataron a mi gatita como una reina." Llevé a mi gatita por sus vacunas y terminé quedándome por la atención excepcional. Cada miembro del equipo se tomó el tiempo de explicarme con paciencia los beneficios, posibles reacciones y cuidados posteriores. Me sentí totalmente acompañado, y lo mejor: mi gatita estaba tranquila, mimada y feliz. En FioVet, el amor por los animales no se simula... se respira."</p>
         </div>
     </div>
 
