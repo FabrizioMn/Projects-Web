@@ -17,7 +17,7 @@ body{
 }
 
 header{
-    width: 1500px;
+    width: 100%;
 }
 
 
@@ -47,7 +47,7 @@ header{
 
 .navbar__link{
     text-decoration: none;
-    color: #000;
+    color: #565360;
     transition: color 0.5s;
 }
 
@@ -63,23 +63,29 @@ header{
 /*-----MAIN SECTION-----*/
 
 .main{
-    height: 600px;
+    background-image: url(/VeterinariaWeb/imgs/veterinaria.jpg);
+    background-size: cover;
+    height: 90dvh;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
     margin: 0 20px 0 20px;
-    border: 5px solid #94E3F7;
     border-radius: 20px;
     box-shadow: 0 15px 15px #ccc;
     
 }
 
 .main__text{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #0009;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: #fff;
 }
 
 
@@ -92,7 +98,7 @@ header{
 }
 
 .main__text button{
-    font-size: 0.9rem;
+    font-size: 1.25rem;
     margin-top: 10px;
     padding: 5px;
     border-radius: 15px;
@@ -157,6 +163,62 @@ header{
     100% {transform: translateX(calc(-300px*5)); -webkit-transform: translateX(calc(-300px*5)); }
 }
 
+
+
+/*-----ABOUT US SECTION-----*/
+
+.aboutUs{
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.aboutUs__block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+
+.aboutUs__img img{
+    height: 500px;
+    width: 550px;
+    border-radius: 50% 80% / 70% 10%;
+    object-fit: cover;
+}
+
+.aboutUs__block:nth-child(2) .aboutUs__img img{
+    border-radius: 30% 30% / 80% 80%;
+}
+
+.aboutUs__block:nth-child(3) .aboutUs__img img{
+    border-radius: 60px 70px 40px 140px;
+}
+
+.aboutUs__text{
+    width: 30%;
+    font-size: 1.75rem;
+    color: #565360;
+}
+
+.aboutUs__text h3{
+    position: relative;
+    color: #302e35;
+}
+
+.aboutUs__text h3::before{
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #302e35;
+    position: absolute;
+}
+
 /*-----SERVICES SECTION-----*/
 
 .separation{
@@ -174,30 +236,64 @@ header{
 }
 
 .services{
-    max-width: 1500px;
-    height: 400px;
-    justify-self: center;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 0px 0 30px 0;
-    gap: 50px;
+    justify-content: center;
+    gap: 30px;
+    background-color: #17548F;
+    padding: 20px;
+}
+
+.services h2{
+    color: #FFFFFF;
+    font-size: 3rem;
+    position: relative;
+}
+
+.services h2::before{
+    content: "";
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 2px;
+    position: absolute;
 }
 
 
+.card__container{
+    width: 100%;
+    height: 75%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
 .card{
+    min-width: 300px;
+    height: auto;
+    width: 550px;
     background-color: #fff;
     padding: 10px;
-    border: 4px solid #94E3F7;
+    border-radius: 10px;
     text-align: center;
-    border-radius: 20px;
     transition: transform 0.5s;
-    box-shadow: 5px 5px 10px #ccc;
-    color: #17548F
-
+    color: #565360;
+    font-size: 0.9rem;
 }
 
 .card:hover{
     transform: scale(1.1);
+}
+
+.card h2{
+    color: #565360;
+    font-size: 1.5rem;
 }
 
 
@@ -205,44 +301,14 @@ header{
     object-position: top;
 
 }
+
 .card img{
-    height: 250px;
-    width: 350px;
+    height: 300px;
+    width: 100%;
     object-fit: cover;
+    object-position: center;
     border-radius: 10px;
 }
-
-/*-----ABOUT US SECTION-----*/
-
-.aboutUs{
-    width: 1500px;
-    border:4px solid #94E3F7;
-    border-radius: 25px;
-    display: flex;
-    box-shadow: 0 5px 10px #ccc;
-}
-
-.aboutUs__text{
-    padding: 30px;
-    text-align: justify;
-    font-size: 1.4rem;
-    color: #17548F;
-}
-
-
-
-.aboutUs__img{
-    height: 300px;
-}
-
-.aboutUs__img img{
-    width: 250px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 0 20px 20px 0;
-    border-left: 4px solid #94E3F7;
-}
-
 
 /*-----OPINION SECTION-----*/
 
